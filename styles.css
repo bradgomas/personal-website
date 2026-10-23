@@ -182,14 +182,6 @@ tbody tr:hover {
     transform: translateY(-4px);
 }
 
-.card img {
-    display: block;
-    width: 100%;
-    height: 190px;
-    object-fit: cover;
-    margin-bottom: 16px;
-}
-
 .card iframe {
     display: block;
     width: 100%;
@@ -238,7 +230,21 @@ footer p {
     margin-bottom: 0;
 }
 
-@media (max-width: 700px) {
+/* --- Responsive Media Queries --- */
+
+/* Tablet Styles (Screens up to 1024px) */
+@media (max-width: 1024px) {
+    section {
+        padding: 48px 16px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 25px);
+    }
+}
+
+/* Mobile Phone Styles (Screens up to 600px) */
+@media (max-width: 600px) {
     nav li {
         display: block;
         margin-right: 0;
@@ -246,5 +252,22 @@ footer p {
 
     h1 {
         font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    section {
+        padding: 32px 16px;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 230px;
     }
 }
